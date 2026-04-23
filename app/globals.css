@@ -1,26 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-noir:     #1B1B1B;
+  --color-vert:     #33473E;
+  --color-bordeaux: #4B111C;
+  --color-ivoire:   #F1E6D0;
+  --color-rouge:    #E53935;
+  --color-blanc:    #FFFFFF;
+
+  --font-display: var(--font-league-spartan), sans-serif;
+  --font-body:    var(--font-league-spartan), sans-serif;
+  --font-accent:  "Arkipelago", cursive;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Arkipelago";
+  src: url("/fonts/Arkipelago.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1B1B1B;
+  color: #F1E6D0;
+  font-family: var(--font-body);
 }
