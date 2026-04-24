@@ -4,20 +4,11 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-screen flex flex-col justify-center overflow-hidden"
-      style={{ backgroundColor: "var(--color-bordeaux)" }}
+      style={{ backgroundColor: "var(--color-vert)" }}
     >
-      {/* Texture halftone */}
-      <div
-        className="absolute inset-0 opacity-[0.06] pointer-events-none"
-        style={{
-          backgroundImage: "url('/textures/halftone.png')",
-          backgroundRepeat: "repeat",
-          backgroundSize: "300px",
-        }}
-      />
 
-      {/* Personnage ancré en bas à droite */}
-      <div className="absolute bottom-0 right-0 w-[480px] h-[600px] lg:w-[580px] lg:h-[720px] pointer-events-none">
+      {/* Personnage qui déborde en bas à droite */}
+      <div className="absolute bottom-[-80px] right-[-60px] w-[520px] h-[640px] lg:w-[640px] lg:h-[780px] pointer-events-none">
         <Image
           src="/images/logo-character.png"
           alt="Le personnage DW"
@@ -61,9 +52,6 @@ export default function Hero() {
           Un récit cohérent,<br />
           <span style={{ color: "var(--color-rouge)" }}>beaucoup moins.</span>
         </h1>
-
-        {/* Séparateur */}
-        <div className="w-12 h-px" style={{ backgroundColor: "var(--color-ivoire)", opacity: 0.25 }} />
 
         {/* Signature Arkipelago */}
         <p
