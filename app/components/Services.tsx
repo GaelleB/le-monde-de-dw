@@ -1,4 +1,9 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const EASE = [0.16, 1, 0.3, 1] as const;
 
 const services = [
   {
@@ -30,8 +35,13 @@ export default function Services() {
     >
       <div className="max-w-7xl mx-auto px-8 py-24 flex flex-col gap-16">
 
-        {/* Label + titre */}
-        <div className="flex flex-col gap-6">
+        <motion.div
+          className="flex flex-col gap-6"
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 1.3, ease: EASE }}
+        >
           <span
             className="text-xs uppercase tracking-[0.3em]"
             style={{ color: "var(--color-ivoire)", opacity: 0.4 }}
@@ -45,15 +55,18 @@ export default function Services() {
             Ce que je fais<br />
             <span style={{ color: "var(--color-rouge)" }}>pour toi.</span>
           </h2>
-        </div>
+        </motion.div>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((s, i) => (
-            <div
+            <motion.div
               key={i}
               className="flex flex-col gap-6 p-8 border"
-              style={{ borderColor: "var(--color-ivoire)", opacity: 1, borderOpacity: 0.15 }}
+              style={{ borderColor: "var(--color-ivoire)", borderOpacity: 0.15 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.2, delay: i * 0.2, ease: EASE }}
             >
               <div className="relative w-10 h-10">
                 <Image
@@ -87,7 +100,7 @@ export default function Services() {
               >
                 {s.cta} →
               </a>
-            </div>
+            </motion.div>
           ))}
         </div>
 

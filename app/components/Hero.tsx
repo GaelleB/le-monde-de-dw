@@ -1,4 +1,19 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const EASE = [0.16, 1, 0.3, 1] as const;
+
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.28, delayChildren: 0.5 } },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 14 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.3, ease: EASE } },
+};
 
 export default function Hero() {
   return (
@@ -8,7 +23,12 @@ export default function Hero() {
     >
 
       {/* Personnage qui déborde en bas à droite */}
-      <div className="absolute bottom-[-30px] right-[-20px] w-[220px] h-[270px] sm:bottom-[-50px] sm:right-[-40px] sm:w-[360px] sm:h-[440px] lg:bottom-[-80px] lg:right-[-60px] lg:w-[640px] lg:h-[780px] pointer-events-none">
+      <motion.div
+        className="absolute -bottom-7.5 -right-5 w-55 h-67.5 sm:-bottom-12.5 sm:-right-10 sm:w-90 sm:h-110 lg:-bottom-20 lg:-right-15 lg:w-160 lg:h-195 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, delay: 1, ease: "easeOut" }}
+      >
         <Image
           src="/images/logo-character.png"
           alt="Le personnage DW"
@@ -17,21 +37,25 @@ export default function Hero() {
           style={{ filter: "brightness(0) invert(1)", opacity: 0.12 }}
           priority
         />
-      </div>
+      </motion.div>
 
       {/* Contenu */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pt-32 pb-24 flex flex-col gap-10">
+      <motion.div
+        className="relative z-10 w-full max-w-7xl mx-auto px-8 pt-32 pb-24 flex flex-col gap-10"
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
 
-        {/* Label éditorial */}
-        <span
+        <motion.span
           className="text-xs uppercase tracking-[0.3em]"
           style={{ color: "var(--color-ivoire)", opacity: 0.4 }}
+          variants={item}
         >
           Storyteller Stratégique
-        </span>
+        </motion.span>
 
-        {/* Intro — petit, léger, avec accent gauche */}
-        <p
+        <motion.p
           className="text-xl md:text-2xl font-light leading-relaxed pl-4 border-l-2"
           style={{
             fontFamily: "var(--font-body)",
@@ -39,30 +63,30 @@ export default function Hero() {
             opacity: 0.7,
             borderColor: "var(--color-rouge)",
           }}
+          variants={item}
         >
           Du contenu,<br />
           tout le monde en fait.
-        </p>
+        </motion.p>
 
-        {/* Titre principal */}
-        <h1
+        <motion.h1
           className="text-[36px] sm:text-[52px] md:text-[68px] lg:text-[88px] font-black leading-none tracking-tight uppercase"
           style={{ fontFamily: "var(--font-display)", color: "var(--color-ivoire)" }}
+          variants={item}
         >
           Un récit cohérent,<br />
           <span style={{ color: "var(--color-rouge)" }}>beaucoup moins.</span>
-        </h1>
+        </motion.h1>
 
-        {/* Signature Arkipelago */}
-        <p
+        <motion.p
           className="text-2xl md:text-3xl lg:text-4xl"
           style={{ fontFamily: "var(--font-accent)", color: "var(--color-ivoire)", opacity: 0.65 }}
+          variants={item}
         >
           On se retrouve de l'autre côté du miroir.
-        </p>
+        </motion.p>
 
-        {/* CTA + scroll hint */}
-        <div className="flex items-center gap-12 mt-2">
+        <motion.div className="flex items-center gap-12 mt-2" variants={item}>
           <a
             href="#contact"
             className="px-8 py-4 text-xs font-bold uppercase tracking-widest transition-opacity hover:opacity-80"
@@ -70,16 +94,15 @@ export default function Hero() {
           >
             Commencer le récit
           </a>
-
           <span
             className="text-xs uppercase tracking-widest hidden md:block"
             style={{ color: "var(--color-ivoire)", opacity: 0.35 }}
           >
             Défiler ↓
           </span>
-        </div>
+        </motion.div>
 
-      </div>
+      </motion.div>
     </section>
   );
 }

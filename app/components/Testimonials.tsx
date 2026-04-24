@@ -1,3 +1,9 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const EASE = [0.16, 1, 0.3, 1] as const;
+
 const featured = {
   quote:
     "Écrire un bon post, ce n'est pas juste balancer une idée bien tournée. C'est raconter une histoire qui accroche et qui marque. Guillaume m'a aidé à revoir complètement ma façon d'écrire et à créer des contenus qui engagent réellement mon audience.",
@@ -35,21 +41,30 @@ export default function Testimonials() {
     >
       {/* Label */}
       <div className="max-w-7xl mx-auto px-8 pt-24 pb-12">
-        <span
+        <motion.span
           className="text-xs uppercase tracking-[0.3em]"
           style={{ color: "var(--color-noir)", opacity: 0.4 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 0.4 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1.2, ease: EASE }}
         >
           03 — Témoignages
-        </span>
+        </motion.span>
       </div>
 
-      {/* Citation vedette — encadré vert */}
-      <div className="max-w-7xl mx-auto px-8 pb-4">
+      {/* Citation vedette */}
+      <motion.div
+        className="max-w-7xl mx-auto px-8 pb-4"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 1.4, ease: EASE }}
+      >
         <div
           className="relative overflow-hidden p-10 md:p-14"
           style={{ backgroundColor: "var(--color-vert)" }}
         >
-          {/* Texture halftone */}
           <div
             className="absolute inset-0 opacity-[0.06] pointer-events-none"
             style={{
@@ -88,13 +103,20 @@ export default function Testimonials() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* 3 citations secondaires */}
       <div className="max-w-7xl mx-auto px-8 py-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-          {testimonials.map((t) => (
-            <div key={t.name} className="flex flex-col gap-6">
+          {testimonials.map((t, i) => (
+            <motion.div
+              key={t.name}
+              className="flex flex-col gap-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.2, delay: i * 0.22, ease: EASE }}
+            >
               <p
                 className="text-base font-light leading-loose"
                 style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: 0.8 }}
@@ -118,7 +140,7 @@ export default function Testimonials() {
                   {t.title}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
