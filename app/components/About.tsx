@@ -45,7 +45,8 @@ function AboutDesktop() {
   return (
     <div ref={ref} style={{ height: "500vh", position: "relative" }}>
       <div
-        className="sticky top-0 h-screen overflow-hidden flex flex-col px-8 py-16"
+        className="sticky top-20 overflow-hidden flex flex-col px-8 pt-12 pb-8"
+        style={{ height: "calc(100vh - 80px)" }}
         style={{ backgroundColor: "var(--color-ivoire)" }}
       >
         <div className="max-w-7xl mx-auto w-full flex flex-col h-full">
