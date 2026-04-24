@@ -33,6 +33,7 @@ function AboutDesktop() {
   const line2Y   = useTransform(progress, [0.13, 0.22], [18, 0]);
   const line3Op  = useTransform(progress, [0.21, 0.30], [0, 1]);
   const line3Y   = useTransform(progress, [0.21, 0.30], [18, 0]);
+  const sepOp    = useTransform(progress, [0.29, 0.37], [0, 1]);
   const photoOp    = useTransform(progress, [0.28, 0.42], [0, 1]);
   const photoScale = useTransform(progress, [0.28, 0.42], [1.04, 1]);
   const statsOp  = useTransform(progress, [0.38, 0.50], [0, 1]);
@@ -65,7 +66,7 @@ function AboutDesktop() {
             <motion.span className="block" style={{ opacity: line3Op, y: line3Y, color: "var(--color-vert)" }}>Beaucoup de contenu.</motion.span>
           </h2>
 
-          <div className="w-full h-px my-8 shrink-0" style={{ backgroundColor: "var(--color-noir)", opacity: 0.1 }} />
+          <motion.div className="w-full h-px my-8 shrink-0" style={{ backgroundColor: "var(--color-noir)", opacity: sepOp }} />
 
           <div className="flex-1 grid grid-cols-2 gap-16 min-h-0">
 
