@@ -8,7 +8,7 @@ export default function Contact() {
       style={{ backgroundColor: "var(--color-vert)" }}
     >
       {/* Personnage miroir — bas gauche */}
-      <div className="absolute bottom-[-30px] left-[-20px] w-[220px] h-[270px] sm:bottom-[-50px] sm:left-[-40px] sm:w-[360px] sm:h-[440px] lg:bottom-[-80px] lg:left-[-60px] lg:w-[640px] lg:h-[780px] pointer-events-none" style={{ transform: "scaleX(-1)" }}>
+      <div className="absolute -bottom-7.5 -left-5 w-557h-67.sm:-bottom-12.5sm:-left-10m:wsm:w-90h-[440px] lg:-bottom-20llg:-left-15wlg:w-160h-[780px] pointer-events-none" style={{ transform: "scaleX(-1)" }}>
         <Image
           src="/images/logo-character.png"
           alt=""
@@ -78,7 +78,7 @@ export default function Contact() {
           className="text-2xl md:text-3xl mt-8"
           style={{ fontFamily: "var(--font-accent)", color: "var(--color-ivoire)", opacity: 0.5 }}
         >
-          On se retrouve de l'autre côté du miroir.
+          On se retrouve de l&apos;autre côté du miroir.
         </p>
 
       </div>
