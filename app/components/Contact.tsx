@@ -8,7 +8,7 @@ export default function Contact() {
       style={{ backgroundColor: "var(--color-vert)" }}
     >
       {/* Personnage miroir — bas gauche */}
-      <div className="absolute bottom-[-80px] left-[-60px] w-[520px] h-[640px] lg:w-[640px] lg:h-[780px] pointer-events-none" style={{ transform: "scaleX(-1)" }}>
+      <div className="absolute bottom-[-30px] left-[-20px] w-[220px] h-[270px] sm:bottom-[-50px] sm:left-[-40px] sm:w-[360px] sm:h-[440px] lg:bottom-[-80px] lg:left-[-60px] lg:w-[640px] lg:h-[780px] pointer-events-none" style={{ transform: "scaleX(-1)" }}>
         <Image
           src="/images/logo-character.png"
           alt=""
@@ -31,7 +31,7 @@ export default function Contact() {
         {/* Accroche */}
         <div className="flex flex-col gap-6 max-w-3xl">
           <h2
-            className="text-5xl md:text-6xl lg:text-7xl font-black uppercase leading-none"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase leading-none"
             style={{ fontFamily: "var(--font-display)", color: "var(--color-ivoire)" }}
           >
             Ton récit<br />
@@ -53,14 +53,16 @@ export default function Contact() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-            href="#"
+            href="https://calendly.com/dwauteur/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-4 text-xs font-bold uppercase tracking-widest text-center transition-opacity hover:opacity-85"
             style={{ backgroundColor: "var(--color-rouge)", color: "var(--color-blanc)" }}
           >
             Prendre rendez-vous
           </a>
           <a
-            href="#"
+            href="mailto:dwauteur@gmail.com"
             className="px-8 py-4 text-xs font-bold uppercase tracking-widest text-center border transition-opacity hover:opacity-60"
             style={{
               borderColor: "var(--color-ivoire)",

@@ -8,7 +8,7 @@ export default function Hero() {
     >
 
       {/* Personnage qui déborde en bas à droite */}
-      <div className="absolute bottom-[-80px] right-[-60px] w-[520px] h-[640px] lg:w-[640px] lg:h-[780px] pointer-events-none">
+      <div className="absolute bottom-[-30px] right-[-20px] w-[220px] h-[270px] sm:bottom-[-50px] sm:right-[-40px] sm:w-[360px] sm:h-[440px] lg:bottom-[-80px] lg:right-[-60px] lg:w-[640px] lg:h-[780px] pointer-events-none">
         <Image
           src="/images/logo-character.png"
           alt="Le personnage DW"
@@ -46,7 +46,7 @@ export default function Hero() {
 
         {/* Titre principal */}
         <h1
-          className="text-[52px] md:text-[68px] lg:text-[88px] font-black leading-none tracking-tight uppercase"
+          className="text-[36px] sm:text-[52px] md:text-[68px] lg:text-[88px] font-black leading-none tracking-tight uppercase"
           style={{ fontFamily: "var(--font-display)", color: "var(--color-ivoire)" }}
         >
           Un récit cohérent,<br />

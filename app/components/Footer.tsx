@@ -52,7 +52,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
 
           {/* Réseaux */}
-          <nav className="flex flex-wrap gap-8">
+          <nav className="grid grid-cols-2 sm:flex sm:flex-wrap gap-x-8 gap-y-4 sm:gap-8">
             {socials.map((s) => (
               <a
                 key={s.label}
