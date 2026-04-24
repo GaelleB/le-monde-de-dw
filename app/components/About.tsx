@@ -15,16 +15,16 @@ export default function About() {
           className="text-xs uppercase tracking-[0.3em] mb-8 block"
           style={{ color: "var(--color-noir)", opacity: 0.35 }}
         >
-          01 — À propos
+          02 — À propos
         </span>
 
         <h2
           className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-tight"
           style={{ fontFamily: "var(--font-display)", color: "var(--color-noir)" }}
         >
-          J'ai passé 6 ans<br />
+          J'ai passé 7 ans<br />
           à produire du contenu.<br />
-          <span style={{ color: "var(--color-bordeaux)" }}>Beaucoup de contenu.</span>
+          <span style={{ color: "var(--color-vert)" }}>Beaucoup de contenu.</span>
         </h2>
       </div>
 
@@ -48,31 +48,31 @@ export default function About() {
           </div>
 
           {/* Stat */}
-          <div className="flex gap-12">
+          <div className="flex gap-16">
             <div>
               <p
-                className="text-5xl font-black"
-                style={{ fontFamily: "var(--font-display)", color: "var(--color-bordeaux)" }}
+                className="text-[80px] font-black leading-none"
+                style={{ fontFamily: "var(--font-display)", color: "var(--color-vert)" }}
               >
-                7 ans
+                7
               </p>
               <p
-                className="text-sm uppercase tracking-widest mt-1"
-                style={{ color: "var(--color-noir)", opacity: 0.5 }}
+                className="text-[10px] uppercase tracking-[0.25em] mt-2"
+                style={{ color: "var(--color-noir)", opacity: 0.45 }}
               >
-                d'expérience
+                ans d'expérience
               </p>
             </div>
             <div>
               <p
-                className="text-5xl font-black"
-                style={{ fontFamily: "var(--font-display)", color: "var(--color-bordeaux)" }}
+                className="text-[80px] font-black leading-none"
+                style={{ fontFamily: "var(--font-display)", color: "var(--color-vert)" }}
               >
                 10+
               </p>
               <p
-                className="text-sm uppercase tracking-widest mt-1"
-                style={{ color: "var(--color-noir)", opacity: 0.5 }}
+                className="text-[10px] uppercase tracking-[0.25em] mt-2"
+                style={{ color: "var(--color-noir)", opacity: 0.45 }}
               >
                 recommandations
               </p>
@@ -114,7 +114,7 @@ export default function About() {
 
           <p
             className="text-2xl md:text-3xl"
-            style={{ fontFamily: "var(--font-accent)", color: "var(--color-bordeaux)" }}
+            style={{ fontFamily: "var(--font-accent)", color: "var(--color-vert)" }}
           >
             Tu ne feras pas plus de bruit.<br />
             Tu donneras plus de sens.
