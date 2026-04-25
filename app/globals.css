@@ -26,3 +26,18 @@ body {
   color: #F1E6D0;
   font-family: var(--font-body);
 }
+
+/* Focus visible — navigation clavier */
+:focus-visible {
+  outline: 2px solid var(--color-rouge);
+  outline-offset: 3px;
+}
+
+/* Respect du paramètre système "réduire les animations" */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
