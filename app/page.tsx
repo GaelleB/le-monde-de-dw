@@ -6,11 +6,13 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollLine from "./components/ScrollLine";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function Home() {
   return (
     <>
       <ScrollLine />
+      <ScrollToTop />
       <Navbar />
       <main id="main-content">
         <Hero />
