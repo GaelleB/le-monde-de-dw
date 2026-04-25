@@ -133,11 +133,13 @@ export default function Navbar() {
 
       {/* Menu mobile overlay */}
       <div
+        aria-hidden={!menuOpen}
         className="fixed inset-0 z-40 flex flex-col justify-center px-8 transition-opacity duration-300 md:hidden"
         style={{
           backgroundColor: "var(--color-noir)",
           opacity: menuOpen ? 1 : 0,
           pointerEvents: menuOpen ? "auto" : "none",
+          visibility: menuOpen ? "visible" : "hidden",
         }}
       >
         <nav className="flex flex-col gap-8 pt-24">

@@ -42,7 +42,7 @@ function HeroDesktop() {
 
         {/* Character — overflows intentionally, no overflow-hidden */}
         <motion.div
-          className="absolute -bottom-7.5 -right-5 w-55 h-67.5 lg:-bottom-20 lg:-right-15 lg:w-160 lg:h-195 pointer-events-none"
+          className="absolute -bottom-7.5 -right-5 w-55 h-67.5 md:-bottom-12 md:-right-8 md:w-96 md:h-120 lg:-bottom-20 lg:-right-15 lg:w-160 lg:h-195 pointer-events-none"
           style={{ opacity: charOp }}
         >
           <Image

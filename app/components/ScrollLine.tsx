@@ -39,7 +39,7 @@ export default function ScrollLine() {
   return (
     <div
       aria-hidden="true"
-      className="fixed left-8 top-0 h-screen pointer-events-none hidden lg:block"
+      className="fixed left-8 top-0 h-screen pointer-events-none hidden md:block"
       style={{
         zIndex: 51,
         width: `${lineWidth}px`,

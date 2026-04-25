@@ -44,7 +44,7 @@ function ContactDesktop() {
 
         {/* Character — overflows intentionally, mirrored */}
         <motion.div
-          className="absolute -bottom-7.5 -left-5 w-55 h-67.5 lg:-bottom-20 lg:-left-15 lg:w-160 lg:h-195 pointer-events-none"
+          className="absolute -bottom-7.5 -left-5 w-55 h-67.5 md:-bottom-12 md:-left-8 md:w-96 md:h-120 lg:-bottom-20 lg:-left-15 lg:w-160 lg:h-195 pointer-events-none"
           style={{ opacity: charOp, scaleX: -1 }}
         >
           <Image

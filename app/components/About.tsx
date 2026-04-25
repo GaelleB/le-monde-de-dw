@@ -194,12 +194,19 @@ export default function About() {
           <span className="text-xs uppercase tracking-[0.3em] mb-8 block" style={{ color: "var(--color-noir)", opacity: 0.35 }}>
             01 — À propos
           </span>
-          <h2 className="text-4xl font-black uppercase leading-tight" style={{ fontFamily: "var(--font-display)", color: "var(--color-noir)" }}>
+          <motion.h2
+            className="text-4xl font-black uppercase leading-tight"
+            style={{ fontFamily: "var(--font-display)", color: "var(--color-noir)" }}
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.3, ease: EASE }}
+          >
             7 ans.<br />
             À produire du contenu.<br />
             <span style={{ color: "var(--color-vert)" }}>Encore.</span><br />
             <span style={{ color: "var(--color-vert)" }}>Et encore.</span>
-          </h2>
+          </motion.h2>
         </div>
 
         <div className="h-px w-full" style={{ backgroundColor: "var(--color-noir)", opacity: 0.1 }} />
