@@ -7,10 +7,12 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollLine from "./components/ScrollLine";
 import ScrollToTop from "./components/ScrollToTop";
+import JumpHandler from "./components/JumpHandler";
 
 export default function Home() {
   return (
     <>
+      <JumpHandler />
       <ScrollLine />
       <ScrollToTop />
       <Navbar />
