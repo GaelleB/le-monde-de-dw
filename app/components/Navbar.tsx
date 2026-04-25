@@ -46,6 +46,7 @@ export default function Navbar() {
               height={90}
               className="w-32 h-auto"
               style={{ filter: "brightness(0) invert(1)" }}
+              priority
             />
           </Link>
 

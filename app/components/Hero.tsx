@@ -36,6 +36,7 @@ export default function Hero() {
           className="object-contain object-bottom"
           style={{ filter: "brightness(0) invert(1)", opacity: 0.12 }}
           priority
+          sizes="(max-width: 640px) 220px, (max-width: 1024px) 360px, 640px"
         />
       </motion.div>
 

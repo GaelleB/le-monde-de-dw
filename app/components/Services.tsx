@@ -75,6 +75,7 @@ export default function Services() {
                   fill
                   className="object-contain"
                   style={{ filter: "brightness(0) invert(1)", opacity: 0.7 }}
+                  sizes="40px"
                 />
               </div>
 

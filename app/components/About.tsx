@@ -77,7 +77,7 @@ function AboutDesktop() {
                 className="relative w-full overflow-hidden"
                 style={{ height: "42vh", opacity: photoOp, scale: photoScale }}
               >
-                <Image src="/images/photo-profil.png" alt="Guillaume Michel" fill className="object-cover object-top" />
+                <Image src="/images/photo-profil.png" alt="Guillaume Michel" fill className="object-cover object-top" sizes="(max-width: 1280px) 45vw, 560px" />
               </motion.div>
 
               <motion.div className="flex gap-12" style={{ opacity: statsOp }}>
@@ -151,7 +151,7 @@ export default function About() {
             initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
             viewport={{ once: true }} transition={{ duration: 1.3, ease: EASE }}
           >
-            <Image src="/images/photo-profil.png" alt="Guillaume Michel" fill className="object-cover object-top" />
+            <Image src="/images/photo-profil.png" alt="Guillaume Michel" fill className="object-cover object-top" sizes="100vw" />
           </motion.div>
 
           <div className="flex gap-16">
