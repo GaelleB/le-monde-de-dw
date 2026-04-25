@@ -66,8 +66,9 @@ export default function Hero() {
           }}
           variants={item}
         >
-          Du contenu,<br />
-          tout le monde en fait.
+          Tu publies.<br />
+          Encore.<br />
+          Et ça s&apos;accumule.
         </motion.p>
 
         <motion.h1
