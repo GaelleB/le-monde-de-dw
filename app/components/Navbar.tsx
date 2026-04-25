@@ -76,7 +76,7 @@ export default function Navbar() {
 
           {/* Hamburger mobile */}
           <button
-            className="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8 shrink-0"
+            className="md:hidden flex flex-col justify-center gap-1.25 w-8 h-8 shrink-0"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           >
