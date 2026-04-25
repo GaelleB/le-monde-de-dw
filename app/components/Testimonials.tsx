@@ -59,8 +59,7 @@ function TestimonialsDesktop() {
     <div ref={ref} style={{ height: "500vh", position: "relative" }}>
       <div
         className="sticky top-20 overflow-hidden flex flex-col px-8 pt-12 pb-8"
-        style={{ height: "calc(100vh - 80px)" }}
-        style={{ backgroundColor: "var(--color-ivoire)" }}
+        style={{ height: "calc(100vh - 80px)", backgroundColor: "var(--color-ivoire)" }}
       >
         <div className="max-w-7xl mx-auto w-full flex flex-col h-full">
 
