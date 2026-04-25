@@ -62,7 +62,7 @@ function HeroDesktop() {
             className="text-xs uppercase tracking-[0.3em]"
             style={{ color: "var(--color-ivoire)", opacity: 0.4 }}
           >
-            Storyteller Stratégique
+            Guillaume Michel - Storyteller Stratégique
           </span>
 
           <div className="flex flex-col">
@@ -159,7 +159,7 @@ export default function Hero() {
             animate={{ opacity: 0.4 }}
             transition={{ duration: 1.2, delay: 0.3, ease: EASE }}
           >
-            Storyteller Stratégique
+            Guillaume Michel - Storyteller Stratégique
           </motion.span>
 
           <motion.div

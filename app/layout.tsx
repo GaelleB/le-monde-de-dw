@@ -10,6 +10,22 @@ const leagueSpartan = League_Spartan({
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lemonddedw.fr";
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Guillaume Michel",
+  "jobTitle": "Storyteller Stratégique",
+  "description": "Guillaume Michel, storyteller stratégique. Aide les marques et indépendants à construire un récit cohérent, une voix claire et un contenu qui engage vraiment leur audience.",
+  "url": SITE_URL,
+  "image": `${SITE_URL}/images/photo-profil.png`,
+  "email": "dwauteur@gmail.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/guillaume-michel-storyteller-strategique/",
+    "https://guillaumemichelstorytelling.substack.com/",
+    "https://www.instagram.com/lemondededw/",
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -29,6 +45,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Guillaume Michel" }],
   creator: "Guillaume Michel",
+  alternates: {
+    canonical: SITE_URL,
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -37,6 +56,14 @@ export const metadata: Metadata = {
     title: "Le Monde de DW — Storyteller Stratégique",
     description:
       "Guillaume Michel, storyteller stratégique. Un récit cohérent, beaucoup moins de bruit.",
+    images: [
+      {
+        url: "/images/photo-profil.png",
+        width: 1200,
+        height: 630,
+        alt: "Guillaume Michel — Storyteller Stratégique",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -65,6 +92,10 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${leagueSpartan.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col overflow-x-hidden">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:px-4 focus:py-2 focus:text-xs focus:font-bold focus:uppercase focus:tracking-widest"

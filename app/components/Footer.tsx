@@ -52,21 +52,29 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
 
           {/* Réseaux */}
-          <nav className="grid grid-cols-2 sm:flex sm:flex-wrap gap-x-8 gap-y-4 sm:gap-8">
+          <nav aria-label="Réseaux sociaux" className="grid grid-cols-2 sm:flex sm:flex-wrap gap-x-8 gap-y-4 sm:gap-8">
             {socials.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs uppercase tracking-widest transition-opacity hover:opacity-60"
-                style={{
-                  color: s.href === "#" ? "var(--color-ivoire)" : "var(--color-ivoire)",
-                  opacity: s.href === "#" ? 0.25 : 0.7,
-                }}
-              >
-                {s.label}{s.href === "#" && " ↗"}
-              </a>
+              s.href === "#" ? (
+                <span
+                  key={s.label}
+                  className="text-xs uppercase tracking-widest"
+                  style={{ color: "var(--color-ivoire)", opacity: 0.25 }}
+                >
+                  {s.label}
+                </span>
+              ) : (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${s.label} — Guillaume Michel`}
+                  className="text-xs uppercase tracking-widest transition-opacity hover:opacity-60"
+                  style={{ color: "var(--color-ivoire)", opacity: 0.7 }}
+                >
+                  {s.label}
+                </a>
+              )
             ))}
           </nav>
 
