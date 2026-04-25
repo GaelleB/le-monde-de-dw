@@ -56,8 +56,9 @@ export default function Contact() {
             className="text-xl font-light leading-relaxed max-w-md"
             style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)", opacity: 0.7 }}
           >
-            Tu veux arrêter de communiquer et commencer à incarner quelque chose de clair ?
-            Parlons-en.
+            Tu veux arrêter de communiquer.<br />
+            Commencer à incarner quelque chose de clair.<br />
+            Parlons.
           </p>
         </motion.div>
 
