@@ -71,15 +71,15 @@ function AboutDesktop() {
           <div className="flex-1 grid grid-cols-2 gap-16 min-h-0">
 
             {/* Photo + stats */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 min-h-0">
               <motion.div
-                className="relative w-full overflow-hidden"
-                style={{ height: "42vh", opacity: photoOp, scale: photoScale }}
+                className="relative w-full flex-1 min-h-0 overflow-hidden"
+                style={{ opacity: photoOp, scale: photoScale }}
               >
                 <Image src="/images/photo-profil.png" alt="Guillaume Michel" fill className="object-cover object-top" sizes="(max-width: 1280px) 45vw, 560px" />
               </motion.div>
 
-              <motion.div className="flex gap-12" style={{ opacity: statsOp }}>
+              <motion.div className="flex gap-12 shrink-0" style={{ opacity: statsOp }}>
                 <div>
                   <p className="text-[64px] font-black leading-none" style={{ fontFamily: "var(--font-display)", color: "var(--color-vert)" }}>7</p>
                   <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.45 }}>ans d&apos;expérience</p>
