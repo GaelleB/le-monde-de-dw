@@ -100,7 +100,7 @@ function TestimonialsDesktop() {
                 className="text-7xl font-black"
                 style={{ fontFamily: "var(--font-display)", color: "var(--color-rouge)", lineHeight: 0.8 }}
               >
-                "
+                &quot;
               </span>
               <p
                 className="text-xl lg:text-2xl font-light leading-relaxed"
@@ -127,7 +127,7 @@ function TestimonialsDesktop() {
                   className="text-sm font-light leading-loose"
                   style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: 0.8 }}
                 >
-                  "{t.quote}"
+                  &quot;{t.quote}&quot;
                 </p>
                 <div className="pt-5 border-t" style={{ borderColor: "var(--color-noir)", opacity: 1 }}>
                   <p className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--color-rouge)" }}>{t.name}</p>
@@ -167,7 +167,7 @@ export default function Testimonials() {
               style={{ backgroundImage: "url('/textures/halftone.png')", backgroundRepeat: "repeat", backgroundSize: "300px" }}
             />
             <div className="relative z-10 flex flex-col gap-6 max-w-3xl">
-              <span className="text-8xl font-black" style={{ fontFamily: "var(--font-display)", color: "var(--color-rouge)", lineHeight: 0.8 }}>"</span>
+              <span className="text-8xl font-black" style={{ fontFamily: "var(--font-display)", color: "var(--color-rouge)", lineHeight: 0.8 }}>&quot;</span>
               <p className="text-2xl font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)" }}>{featured.quote}</p>
               <div className="flex flex-col gap-1 mt-2">
                 <p className="text-sm font-bold uppercase tracking-widest" style={{ color: "var(--color-rouge)" }}>{featured.name}</p>
@@ -189,7 +189,7 @@ export default function Testimonials() {
                 transition={{ duration: 1.2, delay: i * 0.15, ease: EASE }}
               >
                 <p className="text-base font-light leading-loose" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: 0.8 }}>
-                  "{t.quote}"
+                  &quot;{t.quote}&quot;
                 </p>
                 <div className="pt-6 border-t" style={{ borderColor: "var(--color-noir)" }}>
                   <p className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--color-rouge)" }}>{t.name}</p>
