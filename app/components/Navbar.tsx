@@ -55,7 +55,15 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
 
           {/* Logo */}
-          <Link href="/" className="shrink-0" onClick={() => setMenuOpen(false)}>
+          <Link
+            href="/"
+            className="shrink-0"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              setMenuOpen(false);
+            }}
+          >
             <Image
               src="/images/logo-black.svg"
               alt="Le Monde de DW"
