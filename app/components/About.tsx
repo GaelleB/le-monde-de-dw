@@ -46,8 +46,7 @@ function AboutDesktop() {
     <div ref={ref} style={{ height: "500vh", position: "relative" }}>
       <div
         className="sticky top-20 overflow-hidden flex flex-col px-8 pt-12 pb-8"
-        style={{ height: "calc(100vh - 80px)" }}
-        style={{ backgroundColor: "var(--color-ivoire)" }}
+        style={{ height: "calc(100vh - 80px)", backgroundColor: "var(--color-ivoire)" }}
       >
         <div className="max-w-7xl mx-auto w-full flex flex-col h-full">
 
@@ -62,7 +61,7 @@ function AboutDesktop() {
             className="text-5xl lg:text-6xl font-black uppercase leading-tight shrink-0"
             style={{ fontFamily: "var(--font-display)", color: "var(--color-noir)" }}
           >
-            <motion.span className="block" style={{ opacity: line1Op, y: line1Y }}>J'ai passé 7 ans</motion.span>
+            <motion.span className="block" style={{ opacity: line1Op, y: line1Y }}>J&apos;ai passé 7 ans</motion.span>
             <motion.span className="block" style={{ opacity: line2Op, y: line2Y }}>à produire du contenu.</motion.span>
             <motion.span className="block" style={{ opacity: line3Op, y: line3Y, color: "var(--color-vert)" }}>Beaucoup de contenu.</motion.span>
           </h2>
@@ -83,7 +82,7 @@ function AboutDesktop() {
               <motion.div className="flex gap-12" style={{ opacity: statsOp }}>
                 <div>
                   <p className="text-[64px] font-black leading-none" style={{ fontFamily: "var(--font-display)", color: "var(--color-vert)" }}>7</p>
-                  <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.45 }}>ans d'expérience</p>
+                  <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.45 }}>ans d&apos;expérience</p>
                 </div>
                 <div>
                   <p className="text-[64px] font-black leading-none" style={{ fontFamily: "var(--font-display)", color: "var(--color-vert)" }}>10+</p>
@@ -95,13 +94,13 @@ function AboutDesktop() {
             {/* Texte */}
             <div className="flex flex-col justify-center gap-7">
               <motion.p className="text-lg font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: t1Op }}>
-                Puis j'ai compris que ce n'était pas le problème.
+                Puis j&apos;ai compris que ce n&apos;était pas le problème.
               </motion.p>
 
               <motion.div className="pl-4 border-l-2" style={{ borderColor: "var(--color-rouge)", opacity: t2Op }}>
                 <p className="text-sm font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: 0.8 }}>
-                  La plupart des marques n'ont pas besoin d'écrire plus.<br />
-                  Elles ont besoin d'un fil. D'une voix. D'un récit qui tienne.
+                  La plupart des marques n&apos;ont pas besoin d&apos;écrire plus.<br />
+                  Elles ont besoin d&apos;un fil. D&apos;une voix. D&apos;un récit qui tienne.
                 </p>
               </motion.div>
 
@@ -137,7 +136,7 @@ export default function About() {
             01 — À propos
           </span>
           <h2 className="text-4xl font-black uppercase leading-tight" style={{ fontFamily: "var(--font-display)", color: "var(--color-noir)" }}>
-            J'ai passé 7 ans<br />
+            J&apos;ai passé 7 ans<br />
             à produire du contenu.<br />
             <span style={{ color: "var(--color-vert)" }}>Beaucoup de contenu.</span>
           </h2>
@@ -147,7 +146,7 @@ export default function About() {
 
         <div className="max-w-7xl mx-auto px-8 py-16 flex flex-col gap-8">
           <motion.div
-            className="relative w-full aspect-[4/5] overflow-hidden"
+            className="relative w-full aspect-4/5 overflow-hidden"
             initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
             viewport={{ once: true }} transition={{ duration: 1.3, ease: EASE }}
           >
@@ -157,7 +156,7 @@ export default function About() {
           <div className="flex gap-16">
             <div>
               <p className="text-[80px] font-black leading-none" style={{ fontFamily: "var(--font-display)", color: "var(--color-vert)" }}>7</p>
-              <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.45 }}>ans d'expérience</p>
+              <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.45 }}>ans d&apos;expérience</p>
             </div>
             <div>
               <p className="text-[80px] font-black leading-none" style={{ fontFamily: "var(--font-display)", color: "var(--color-vert)" }}>10+</p>
@@ -167,14 +166,14 @@ export default function About() {
 
           <motion.p className="text-xl font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)" }}
             initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1.3, ease: EASE }}>
-            Puis j'ai compris que ce n'était pas le problème.
+            Puis j&apos;ai compris que ce n&apos;était pas le problème.
           </motion.p>
 
           <motion.div className="pl-4 border-l-2" style={{ borderColor: "var(--color-rouge)" }}
             initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1.3, delay: 0.1, ease: EASE }}>
             <p className="text-lg font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: 0.8 }}>
-              La plupart des marques n'ont pas besoin d'écrire plus.<br />
-              Elles ont besoin d'un fil. D'une voix. D'un récit qui tienne.
+              La plupart des marques n&apos;ont pas besoin d&apos;écrire plus.<br />
+              Elles ont besoin d&apos;un fil. D&apos;une voix. D&apos;un récit qui tienne.
             </p>
           </motion.div>
 
