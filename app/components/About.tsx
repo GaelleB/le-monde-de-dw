@@ -42,6 +42,28 @@ function AboutDesktop() {
   const t3Op     = useTransform(progress, [0.64, 0.75], [0, 1]);
   const t4Op     = useTransform(progress, [0.73, 0.86], [0, 1]);
 
+  // Traits qui se dessinent sous les phrases pivots — lents, presque imperceptibles
+  const t1LineScaleX = useTransform(progress, [0.57, 0.92], [0, 1]);
+  const t4LineScaleX = useTransform(progress, [0.86, 0.99], [0, 1]);
+
+  // Opacités basses : échos du fil, pas effets graphiques
+  const t1LineOp = useTransform(t1Op, [0, 1], [0, 0.38]);
+  const t4LineOp = useTransform(t4Op, [0, 1], [0, 0.30]);
+
+  // Facteurs pour épaissir la ScrollLine gauche
+  const t1Emphasis = useTransform(progress, [0.46, 0.57, 0.68, 0.82], [0, 1, 1, 0]);
+  const t4Emphasis = useTransform(progress, [0.73, 0.86, 0.96, 1.0], [0, 1, 1, 0]);
+
+  useEffect(() => {
+    const dispatch = () => {
+      const factor = Math.max(t1Emphasis.get(), t4Emphasis.get());
+      window.dispatchEvent(new CustomEvent("line-emphasis", { detail: { factor } }));
+    };
+    const unsub1 = t1Emphasis.on("change", dispatch);
+    const unsub2 = t4Emphasis.on("change", dispatch);
+    return () => { unsub1(); unsub2(); };
+  }, [t1Emphasis, t4Emphasis]);
+
   return (
     <div ref={ref} style={{ height: "500vh", position: "relative" }}>
       <div
@@ -93,9 +115,20 @@ function AboutDesktop() {
 
             {/* Texte */}
             <div className="flex flex-col justify-center gap-7">
-              <motion.p className="text-lg font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: t1Op }}>
-                Puis j&apos;ai compris que ce n&apos;était pas le problème.
-              </motion.p>
+              <div>
+                <motion.p className="text-lg font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: t1Op }}>
+                  Puis j&apos;ai compris que ce n&apos;était pas le problème.
+                </motion.p>
+                <motion.div
+                  className="h-px mt-2"
+                  style={{
+                    backgroundColor: "var(--color-rouge)",
+                    scaleX: t1LineScaleX,
+                    transformOrigin: "left center",
+                    opacity: t1LineOp,
+                  }}
+                />
+              </div>
 
               <motion.div className="pl-4 border-l-2" style={{ borderColor: "var(--color-rouge)", opacity: t2Op }}>
                 <p className="text-sm font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: 0.8 }}>
@@ -108,9 +141,20 @@ function AboutDesktop() {
                 Je structure.<br />Je relie.<br />Je donne une trajectoire.
               </motion.p>
 
-              <motion.p className="text-xl" style={{ fontFamily: "var(--font-accent)", color: "var(--color-vert)", opacity: t4Op }}>
-                Tu ne feras pas plus de bruit.<br />Tu donneras plus de sens.
-              </motion.p>
+              <div>
+                <motion.p className="text-xl" style={{ fontFamily: "var(--font-accent)", color: "var(--color-vert)", opacity: t4Op }}>
+                  Tu ne feras pas plus de bruit.<br />Tu donneras plus de sens.
+                </motion.p>
+                <motion.div
+                  className="h-px mt-3"
+                  style={{
+                    backgroundColor: "var(--color-vert)",
+                    scaleX: t4LineScaleX,
+                    transformOrigin: "left center",
+                    opacity: t4LineOp,
+                  }}
+                />
+              </div>
             </div>
 
           </div>

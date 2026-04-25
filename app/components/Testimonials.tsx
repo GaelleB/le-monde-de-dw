@@ -55,6 +55,15 @@ function TestimonialsDesktop() {
   const t2Op        = useTransform(progress, [0.37, 0.50], [0, 1]);
   const t3Op        = useTransform(progress, [0.49, 0.62], [0, 1]);
 
+  const featuredEmphasis = useTransform(progress, [0.07, 0.22, 0.38, 0.55], [0, 1, 1, 0]);
+
+  useEffect(() => {
+    const unsub = featuredEmphasis.on("change", (val) => {
+      window.dispatchEvent(new CustomEvent("line-emphasis", { detail: { factor: val } }));
+    });
+    return unsub;
+  }, [featuredEmphasis]);
+
   return (
     <div ref={ref} style={{ height: "500vh", position: "relative" }}>
       <div
