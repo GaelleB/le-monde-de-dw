@@ -22,12 +22,12 @@ function ContactDesktop() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [progress]);
 
-  const labelOp  = useTransform(progress, [0.02, 0.12], [0, 0.4]);
+  const labelOp  = useTransform(progress, [0.02, 0.12], [0, 0.6]);
   const h2L1Op   = useTransform(progress, [0.10, 0.22], [0, 1]);
   const h2L2Op   = useTransform(progress, [0.20, 0.32], [0, 1]);
-  const p1Op     = useTransform(progress, [0.30, 0.42], [0, 0.7]);
-  const p2Op     = useTransform(progress, [0.40, 0.52], [0, 0.7]);
-  const p3Op     = useTransform(progress, [0.50, 0.62], [0, 0.7]);
+  const p1Op     = useTransform(progress, [0.30, 0.42], [0, 0.9]);
+  const p2Op     = useTransform(progress, [0.40, 0.52], [0, 0.9]);
+  const p3Op     = useTransform(progress, [0.50, 0.62], [0, 0.9]);
   const sepOp    = useTransform(progress, [0.52, 0.60], [0, 1]);
   const btnsOp   = useTransform(progress, [0.58, 0.70], [0, 1]);
   const accentOp = useTransform(progress, [0.68, 0.80], [0, 0.5]);
@@ -71,7 +71,7 @@ function ContactDesktop() {
               className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-black uppercase leading-none"
               style={{ fontFamily: "var(--font-display)", color: "var(--color-ivoire)" }}
             >
-              <motion.span className="block" style={{ opacity: h2L1Op }}>Ton récit</motion.span>
+              <motion.span className="block" style={{ opacity: h2L1Op }}>Ton récit de marque</motion.span>
               <motion.span className="block" style={{ opacity: h2L2Op, color: "var(--color-rouge)" }}>commence ici.</motion.span>
             </h2>
 
@@ -80,19 +80,19 @@ function ContactDesktop() {
                 className="text-xl font-light leading-relaxed max-w-md"
                 style={{ color: "var(--color-ivoire)", opacity: p1Op }}
               >
-                Tu veux arrêter de communiquer.
+                Tu veux arrêter de communiquer dans le vide ?
               </motion.p>
               <motion.p
                 className="text-xl font-light leading-relaxed max-w-md"
                 style={{ color: "var(--color-ivoire)", opacity: p2Op }}
               >
-                Commencer à incarner quelque chose de clair.
+                Et si tu commençais à incarner les valeurs et l&apos;histoire de ta marque ?
               </motion.p>
               <motion.p
                 className="text-xl font-light leading-relaxed max-w-md"
                 style={{ color: "var(--color-ivoire)", opacity: p3Op }}
               >
-                Parlons.
+                Parlons de ton projet de communication digitale.
               </motion.p>
             </div>
           </div>
@@ -160,9 +160,9 @@ export default function Contact() {
 
           <motion.span
             className="text-xs uppercase tracking-[0.3em]"
-            style={{ color: "var(--color-ivoire)", opacity: 0.4 }}
+            style={{ color: "var(--color-ivoire)", opacity: 0.6 }}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 0.4 }}
+            whileInView={{ opacity: 0.6 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 1.2, ease: EASE }}
           >
@@ -180,17 +180,17 @@ export default function Contact() {
               className="text-4xl sm:text-5xl font-black uppercase leading-none"
               style={{ fontFamily: "var(--font-display)", color: "var(--color-ivoire)" }}
             >
-              Ton récit<br />
+              Ton récit de marque<br />
               <span style={{ color: "var(--color-rouge)" }}>commence ici.</span>
             </h2>
 
             <p
               className="text-xl font-light leading-relaxed max-w-md"
-              style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)", opacity: 0.7 }}
+              style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)", opacity: 0.9 }}
             >
-              Tu veux arrêter de communiquer.<br />
-              Commencer à incarner quelque chose de clair.<br />
-              Parlons.
+              Tu veux arrêter de communiquer dans le vide ?<br />
+              Et si tu commençais à incarner les valeurs et l&apos;histoire de ta marque ?<br />
+              Parlons de ton projet de communication digitale.
             </p>
           </motion.div>
 
