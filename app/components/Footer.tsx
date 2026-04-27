@@ -10,12 +10,12 @@ const socials = [
     href: "https://guillaumemichelstorytelling.substack.com/",
   },
   {
-    label: "Instagram",
-    href: "https://www.instagram.com/lemondededw/",
+    label: "Facebook",
+    href: "https://www.facebook.com/LemondedeDWauteur",
   },
   {
     label: "TikTok",
-    href: "#",
+    href: "https://www.tiktok.com/@lemondededw",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function Footer() {
             className="text-xl md:text-2xl"
             style={{ fontFamily: "var(--font-accent)", color: "var(--color-ivoire)", opacity: 0.75 }}
           >
-            Sois la différence, et non l'indifférence.
+            Ose la différence. Et non, l&apos;indifférence.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export default function Footer() {
                 <span
                   key={s.label}
                   className="text-xs uppercase tracking-widest"
-                  style={{ color: "var(--color-ivoire)", opacity: 0.25 }}
+                  style={{ color: "var(--color-ivoire)", opacity: 0.45 }}
                 >
                   {s.label}
                 </span>
@@ -81,7 +81,7 @@ export default function Footer() {
           {/* Copyright */}
           <p
             className="text-xs uppercase tracking-widest"
-            style={{ color: "var(--color-ivoire)", opacity: 0.25 }}
+            style={{ color: "var(--color-ivoire)", opacity: 0.45 }}
           >
             © {new Date().getFullYear()} Le Monde de DW
           </p>
