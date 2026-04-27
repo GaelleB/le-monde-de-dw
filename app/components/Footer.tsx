@@ -39,7 +39,7 @@ export default function Footer() {
           />
           <p
             className="text-xl md:text-2xl"
-            style={{ fontFamily: "var(--font-accent)", color: "var(--color-ivoire)", opacity: 0.75 }}
+            style={{ fontFamily: "var(--font-accent)", color: "var(--color-ivoire)" }}
           >
             Ose la différence. Et non, l&apos;indifférence.
           </p>
@@ -54,34 +54,24 @@ export default function Footer() {
           {/* Réseaux */}
           <nav aria-label="Réseaux sociaux" className="grid grid-cols-2 sm:flex sm:flex-wrap gap-x-8 gap-y-4 sm:gap-8">
             {socials.map((s) => (
-              s.href === "#" ? (
-                <span
-                  key={s.label}
-                  className="text-xs uppercase tracking-widest"
-                  style={{ color: "var(--color-ivoire)", opacity: 0.45 }}
-                >
-                  {s.label}
-                </span>
-              ) : (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${s.label} — Guillaume Michel`}
-                  className="text-xs uppercase tracking-widest transition-opacity hover:opacity-60"
-                  style={{ color: "var(--color-ivoire)", opacity: 0.7 }}
-                >
-                  {s.label}
-                </a>
-              )
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${s.label} — Guillaume Michel`}
+                className="text-xs uppercase tracking-widest transition-opacity hover:opacity-60"
+                style={{ color: "var(--color-ivoire)" }}
+              >
+                {s.label}
+              </a>
             ))}
           </nav>
 
           {/* Copyright */}
           <p
             className="text-xs uppercase tracking-widest"
-            style={{ color: "var(--color-ivoire)", opacity: 0.45 }}
+            style={{ color: "var(--color-ivoire)" }}
           >
             © {new Date().getFullYear()} Le Monde de DW
           </p>

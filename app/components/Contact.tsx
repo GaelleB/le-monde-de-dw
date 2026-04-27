@@ -22,15 +22,15 @@ function ContactDesktop() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [progress]);
 
-  const labelOp  = useTransform(progress, [0.02, 0.12], [0, 0.6]);
+  const labelOp  = useTransform(progress, [0.02, 0.12], [0, 1]);
   const h2L1Op   = useTransform(progress, [0.10, 0.22], [0, 1]);
   const h2L2Op   = useTransform(progress, [0.20, 0.32], [0, 1]);
-  const p1Op     = useTransform(progress, [0.30, 0.42], [0, 0.9]);
-  const p2Op     = useTransform(progress, [0.40, 0.52], [0, 0.9]);
-  const p3Op     = useTransform(progress, [0.50, 0.62], [0, 0.9]);
+  const p1Op     = useTransform(progress, [0.30, 0.42], [0, 1]);
+  const p2Op     = useTransform(progress, [0.40, 0.52], [0, 1]);
+  const p3Op     = useTransform(progress, [0.50, 0.62], [0, 1]);
   const sepOp    = useTransform(progress, [0.52, 0.60], [0, 1]);
   const btnsOp   = useTransform(progress, [0.58, 0.70], [0, 1]);
-  const accentOp = useTransform(progress, [0.68, 0.80], [0, 0.5]);
+  const accentOp = useTransform(progress, [0.68, 0.80], [0, 1]);
   const charOp   = useTransform(progress, [0.0,  0.22], [0, 1]);
 
   return (
@@ -39,6 +39,14 @@ function ContactDesktop() {
         className="sticky top-20 flex flex-col px-8"
         style={{ height: "calc(100vh - 80px)", backgroundColor: "var(--color-vert)" }}
       >
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
+          <span
+            className="absolute -right-8 top-1/2 -translate-y-1/2 font-black leading-none whitespace-nowrap uppercase"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(100px, 18vw, 260px)", color: "var(--color-ivoire)", opacity: 0.06 }}
+          >
+            Contact
+          </span>
+        </div>
         {/* Inner wrapper — position:relative for the absolute character */}
         <div className="relative h-full flex flex-col">
 
@@ -61,7 +69,7 @@ function ContactDesktop() {
 
           <motion.span
             className="text-xs uppercase tracking-[0.3em]"
-            style={{ color: "var(--color-ivoire)", opacity: labelOp }}
+            style={{ color: "var(--color-blanc)", opacity: labelOp }}
           >
             04 — Contact
           </motion.span>
@@ -72,7 +80,7 @@ function ContactDesktop() {
               style={{ fontFamily: "var(--font-display)", color: "var(--color-ivoire)" }}
             >
               <motion.span className="block" style={{ opacity: h2L1Op }}>Ton récit de marque</motion.span>
-              <motion.span className="block" style={{ opacity: h2L2Op, color: "var(--color-rouge)" }}>commence ici.</motion.span>
+              <motion.span className="block" style={{ opacity: h2L2Op, color: "var(--color-blanc)" }}>commence ici.</motion.span>
             </h2>
 
             <div className="flex flex-col" style={{ fontFamily: "var(--font-body)" }}>
@@ -145,6 +153,14 @@ export default function Contact() {
 
       {/* Mobile */}
       <div className="md:hidden relative overflow-hidden" style={{ backgroundColor: "var(--color-vert)" }}>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
+          <span
+            className="absolute -right-8 top-1/2 -translate-y-1/2 font-black leading-none whitespace-nowrap uppercase"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(100px, 35vw, 260px)", color: "var(--color-ivoire)", opacity: 0.06 }}
+          >
+            Contact
+          </span>
+        </div>
         <div className="absolute -bottom-7.5 -left-5 w-55 h-67.5 pointer-events-none" style={{ transform: "scaleX(-1)" }}>
           <Image
             src="/images/logo-character.png"
@@ -160,9 +176,9 @@ export default function Contact() {
 
           <motion.span
             className="text-xs uppercase tracking-[0.3em]"
-            style={{ color: "var(--color-ivoire)", opacity: 0.6 }}
+            style={{ color: "var(--color-blanc)" }}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 0.6 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 1.2, ease: EASE }}
           >
@@ -181,12 +197,12 @@ export default function Contact() {
               style={{ fontFamily: "var(--font-display)", color: "var(--color-ivoire)" }}
             >
               Ton récit de marque<br />
-              <span style={{ color: "var(--color-rouge)" }}>commence ici.</span>
+              <span style={{ color: "var(--color-blanc)" }}>commence ici.</span>
             </h2>
 
             <p
               className="text-xl font-light leading-relaxed max-w-md"
-              style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)", opacity: 0.9 }}
+              style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)" }}
             >
               Tu veux arrêter de communiquer dans le vide ?<br />
               Et si tu commençais à incarner les valeurs et l&apos;histoire de ta marque ?<br />
@@ -223,9 +239,9 @@ export default function Contact() {
 
           <motion.p
             className="text-2xl md:text-3xl mt-8"
-            style={{ fontFamily: "var(--font-accent)", color: "var(--color-ivoire)", opacity: 0.5 }}
+            style={{ fontFamily: "var(--font-accent)", color: "var(--color-ivoire)" }}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 0.5 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 1.5, delay: 0.3, ease: EASE }}
           >

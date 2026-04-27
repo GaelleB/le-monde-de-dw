@@ -56,6 +56,14 @@ function ServicesDesktop() {
         className="sticky top-20 flex flex-col px-8 pt-12 pb-8"
         style={{ height: "calc(100vh - 80px)", backgroundColor: "var(--color-vert)" }}
       >
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
+          <span
+            className="absolute -right-8 top-1/2 -translate-y-1/2 font-black leading-none whitespace-nowrap uppercase"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(100px, 18vw, 260px)", color: "var(--color-ivoire)", opacity: 0.06 }}
+          >
+            Services
+          </span>
+        </div>
         <div className="max-w-7xl mx-auto w-full flex flex-col h-full">
 
           <motion.div
@@ -64,7 +72,7 @@ function ServicesDesktop() {
           >
             <span
               className="text-xs uppercase tracking-[0.3em]"
-              style={{ color: "var(--color-ivoire)", opacity: 0.4 }}
+              style={{ color: "var(--color-blanc)" }}
             >
               02 — Services
             </span>
@@ -73,7 +81,7 @@ function ServicesDesktop() {
               style={{ fontFamily: "var(--font-display)", color: "var(--color-ivoire)" }}
             >
               Ce que je fais<br />
-              <span style={{ color: "var(--color-rouge)" }}>pour toi.</span>
+              <span style={{ color: "var(--color-blanc)" }}>pour toi.</span>
             </h2>
           </motion.div>
 
@@ -104,7 +112,7 @@ function ServicesDesktop() {
                   </h3>
                   <p
                     className="text-sm font-light leading-relaxed"
-                    style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)", opacity: 0.65 }}
+                    style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)" }}
                   >
                     {s.description}
                   </p>
@@ -114,7 +122,7 @@ function ServicesDesktop() {
                   href="#contact"
                   aria-label={`${s.cta} — ${s.title}`}
                   className="self-start text-xs font-bold uppercase tracking-widest mt-auto pt-4 border-b pb-px transition-opacity hover:opacity-60"
-                  style={{ color: "var(--color-rouge)", borderColor: "var(--color-rouge)" }}
+                  style={{ color: "var(--color-blanc)", borderColor: "var(--color-blanc)" }}
                 >
                   {s.cta} →
                 </a>
@@ -138,13 +146,21 @@ export default function Services() {
       </div>
 
       {/* Mobile */}
-      <div className="md:hidden" style={{ backgroundColor: "var(--color-vert)" }}>
+      <div className="md:hidden relative" style={{ backgroundColor: "var(--color-vert)" }}>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
+          <span
+            className="absolute -right-8 top-1/2 -translate-y-1/2 font-black leading-none whitespace-nowrap uppercase"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(100px, 35vw, 260px)", color: "var(--color-ivoire)", opacity: 0.06 }}
+          >
+            Services
+          </span>
+        </div>
         <div className="max-w-7xl mx-auto px-8 py-24 flex flex-col gap-16">
 
           <div className="flex flex-col gap-6">
             <span
               className="text-xs uppercase tracking-[0.3em]"
-              style={{ color: "var(--color-ivoire)", opacity: 0.4 }}
+              style={{ color: "var(--color-blanc)" }}
             >
               02 — Services
             </span>
@@ -153,7 +169,7 @@ export default function Services() {
               style={{ fontFamily: "var(--font-display)", color: "var(--color-ivoire)" }}
             >
               Ce que je fais<br />
-              <span style={{ color: "var(--color-rouge)" }}>pour toi.</span>
+              <span style={{ color: "var(--color-blanc)" }}>pour toi.</span>
             </h2>
           </div>
 
@@ -188,7 +204,7 @@ export default function Services() {
                   </h3>
                   <p
                     className="text-sm font-light leading-relaxed"
-                    style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)", opacity: 0.65 }}
+                    style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)" }}
                   >
                     {s.description}
                   </p>
@@ -198,7 +214,7 @@ export default function Services() {
                   href="#contact"
                   aria-label={`${s.cta} — ${s.title}`}
                   className="self-start text-xs font-bold uppercase tracking-widest mt-auto pt-4 border-b pb-px transition-opacity hover:opacity-60"
-                  style={{ color: "var(--color-rouge)", borderColor: "var(--color-rouge)" }}
+                  style={{ color: "var(--color-blanc)", borderColor: "var(--color-blanc)" }}
                 >
                   {s.cta} →
                 </a>

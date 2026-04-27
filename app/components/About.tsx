@@ -74,11 +74,19 @@ function AboutDesktop() {
         className="sticky top-20 overflow-hidden flex flex-col px-8 pt-12 pb-8"
         style={{ height: "calc(100vh - 80px)", backgroundColor: "var(--color-ivoire)" }}
       >
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
+          <span
+            className="absolute -right-8 top-1/2 -translate-y-1/2 font-black leading-none whitespace-nowrap uppercase"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(100px, 18vw, 260px)", color: "var(--color-vert)", opacity: 0.06 }}
+          >
+            À Propos
+          </span>
+        </div>
         <div className="max-w-7xl mx-auto w-full flex flex-col h-full">
 
           <span
             className="text-xs uppercase tracking-[0.3em] mb-8 block shrink-0"
-            style={{ color: "var(--color-noir)", opacity: 0.35 }}
+            style={{ color: "var(--color-noir)", opacity: 0.9 }}
           >
             01 — À propos
           </span>
@@ -109,11 +117,11 @@ function AboutDesktop() {
               <motion.div className="flex gap-12 shrink-0" style={{ opacity: statsOp }}>
                 <div>
                   <p className="text-[64px] font-black leading-none" style={{ fontFamily: "var(--font-display)", color: "var(--color-vert)" }}>7</p>
-                  <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.45 }}>ans d&apos;expérience</p>
+                  <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.9 }}>ans d&apos;expérience</p>
                 </div>
                 <div>
                   <p className="text-[64px] font-black leading-none" style={{ fontFamily: "var(--font-display)", color: "var(--color-vert)" }}>10+</p>
-                  <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.45 }}>recommandations</p>
+                  <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.9 }}>recommandations</p>
                 </div>
               </motion.div>
             </div>
@@ -142,10 +150,10 @@ function AboutDesktop() {
 
               {/* Citation — avec respiration */}
               <motion.div className="pl-4 border-l-2" style={{ borderColor: "var(--color-rouge)", opacity: t2Op }}>
-                <p className="text-sm font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: 0.8 }}>
+                <p className="text-sm font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)" }}>
                   Les marques n&apos;ont pas besoin d&apos;écrire plus.
                 </p>
-                <p className="text-sm font-light leading-relaxed mt-3" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: 0.8 }}>
+                <p className="text-sm font-light leading-relaxed mt-3" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)" }}>
                   Un fil.<br />
                   Une voix.<br />
                   Un récit qui tienne.
@@ -189,9 +197,17 @@ export default function About() {
       </div>
 
       {/* Mobile */}
-      <div className="md:hidden" style={{ backgroundColor: "var(--color-ivoire)" }}>
+      <div className="md:hidden relative" style={{ backgroundColor: "var(--color-ivoire)" }}>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
+          <span
+            className="absolute -right-8 top-1/2 -translate-y-1/2 font-black leading-none whitespace-nowrap uppercase"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(100px, 35vw, 260px)", color: "var(--color-vert)", opacity: 0.06 }}
+          >
+            À Propos
+          </span>
+        </div>
         <div className="w-full px-8 pt-24 pb-16 max-w-7xl mx-auto">
-          <span className="text-xs uppercase tracking-[0.3em] mb-8 block" style={{ color: "var(--color-noir)", opacity: 0.35 }}>
+          <span className="text-xs uppercase tracking-[0.3em] mb-8 block" style={{ color: "var(--color-noir)", opacity: 0.9 }}>
             01 — À propos
           </span>
           <motion.h2
@@ -223,11 +239,11 @@ export default function About() {
           <div className="flex gap-16">
             <div>
               <p className="text-[80px] font-black leading-none" style={{ fontFamily: "var(--font-display)", color: "var(--color-vert)" }}>7</p>
-              <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.45 }}>ans d&apos;expérience</p>
+              <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.9 }}>ans d&apos;expérience</p>
             </div>
             <div>
               <p className="text-[80px] font-black leading-none" style={{ fontFamily: "var(--font-display)", color: "var(--color-vert)" }}>10+</p>
-              <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.45 }}>recommandations</p>
+              <p className="text-[10px] uppercase tracking-[0.25em] mt-2" style={{ color: "var(--color-noir)", opacity: 0.9 }}>recommandations</p>
             </div>
           </div>
 
@@ -243,10 +259,10 @@ export default function About() {
 
           <motion.div className="pl-4 border-l-2" style={{ borderColor: "var(--color-rouge)" }}
             initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1.3, delay: 0.1, ease: EASE }}>
-            <p className="text-lg font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: 0.8 }}>
+            <p className="text-lg font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)" }}>
               Les marques n&apos;ont pas besoin d&apos;écrire plus.
             </p>
-            <p className="text-lg font-light leading-relaxed mt-3" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: 0.8 }}>
+            <p className="text-lg font-light leading-relaxed mt-3" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)" }}>
               Un fil.<br />
               Une voix.<br />
               Un récit qui tienne.

@@ -70,12 +70,20 @@ function TestimonialsDesktop() {
         className="sticky top-20 overflow-hidden flex flex-col px-8 pt-12 pb-8"
         style={{ height: "calc(100vh - 80px)", backgroundColor: "var(--color-ivoire)" }}
       >
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
+          <span
+            className="absolute -right-8 top-1/2 -translate-y-1/2 font-black leading-none whitespace-nowrap uppercase"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(100px, 18vw, 260px)", color: "var(--color-vert)", opacity: 0.06 }}
+          >
+            Témoignages
+          </span>
+        </div>
         <div className="max-w-7xl mx-auto w-full flex flex-col h-full">
 
           {/* Label */}
           <span
             className="text-xs uppercase tracking-[0.3em] mb-6 block shrink-0"
-            style={{ color: "var(--color-noir)", opacity: 0.4 }}
+            style={{ color: "var(--color-noir)", opacity: 0.9 }}
           >
             03 — Témoignages
           </span>
@@ -98,7 +106,7 @@ function TestimonialsDesktop() {
             <div className="relative z-10 flex flex-col gap-4 max-w-3xl">
               <span
                 className="text-7xl font-black"
-                style={{ fontFamily: "var(--font-display)", color: "var(--color-rouge)", lineHeight: 0.8 }}
+                style={{ fontFamily: "var(--font-display)", color: "var(--color-blanc)", lineHeight: 0.8 }}
               >
                 &quot;
               </span>
@@ -109,8 +117,8 @@ function TestimonialsDesktop() {
                 {featured.quote}
               </p>
               <div className="flex flex-col gap-1 mt-2">
-                <p className="text-sm font-bold uppercase tracking-widest" style={{ color: "var(--color-rouge)" }}>{featured.name}</p>
-                <p className="text-xs uppercase tracking-widest" style={{ color: "var(--color-ivoire)", opacity: 0.45 }}>{featured.title}</p>
+                <p className="text-sm font-bold uppercase tracking-widest" style={{ color: "var(--color-ivoire)" }}>{featured.name}</p>
+                <p className="text-xs uppercase tracking-widest" style={{ color: "var(--color-ivoire)" }}>{featured.title}</p>
               </div>
             </div>
           </motion.div>
@@ -125,13 +133,13 @@ function TestimonialsDesktop() {
               <motion.div key={t.name} className="flex flex-col gap-5" style={{ opacity: op }}>
                 <p
                   className="text-sm font-light leading-loose"
-                  style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: 0.8 }}
+                  style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)" }}
                 >
                   &quot;{t.quote}&quot;
                 </p>
                 <div className="pt-5 border-t" style={{ borderColor: "var(--color-noir)", opacity: 1 }}>
-                  <p className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--color-rouge)" }}>{t.name}</p>
-                  <p className="text-xs uppercase tracking-widest mt-1" style={{ color: "var(--color-noir)", opacity: 0.4 }}>{t.title}</p>
+                  <p className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--color-vert)" }}>{t.name}</p>
+                  <p className="text-xs uppercase tracking-widest mt-1" style={{ color: "var(--color-noir)", opacity: 0.9 }}>{t.title}</p>
                 </div>
               </motion.div>
             ))}
@@ -153,9 +161,17 @@ export default function Testimonials() {
       </div>
 
       {/* Mobile */}
-      <div className="md:hidden" style={{ backgroundColor: "var(--color-ivoire)" }}>
+      <div className="md:hidden relative" style={{ backgroundColor: "var(--color-ivoire)" }}>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
+          <span
+            className="absolute -right-8 top-1/2 -translate-y-1/2 font-black leading-none whitespace-nowrap uppercase"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(100px, 35vw, 260px)", color: "var(--color-vert)", opacity: 0.06 }}
+          >
+            Témoignages
+          </span>
+        </div>
         <div className="max-w-7xl mx-auto px-8 pt-24 pb-12">
-          <span className="text-xs uppercase tracking-[0.3em]" style={{ color: "var(--color-noir)", opacity: 0.4 }}>
+          <span className="text-xs uppercase tracking-[0.3em]" style={{ color: "var(--color-noir)", opacity: 0.9 }}>
             03 — Témoignages
           </span>
         </div>
@@ -167,11 +183,11 @@ export default function Testimonials() {
               style={{ backgroundImage: "url('/textures/halftone.png')", backgroundRepeat: "repeat", backgroundSize: "300px" }}
             />
             <div className="relative z-10 flex flex-col gap-6 max-w-3xl">
-              <span className="text-8xl font-black" style={{ fontFamily: "var(--font-display)", color: "var(--color-rouge)", lineHeight: 0.8 }}>&quot;</span>
+              <span className="text-8xl font-black" style={{ fontFamily: "var(--font-display)", color: "var(--color-blanc)", lineHeight: 0.8 }}>&quot;</span>
               <p className="text-2xl font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)" }}>{featured.quote}</p>
               <div className="flex flex-col gap-1 mt-2">
-                <p className="text-sm font-bold uppercase tracking-widest" style={{ color: "var(--color-rouge)" }}>{featured.name}</p>
-                <p className="text-xs uppercase tracking-widest" style={{ color: "var(--color-ivoire)", opacity: 0.45 }}>{featured.title}</p>
+                <p className="text-sm font-bold uppercase tracking-widest" style={{ color: "var(--color-ivoire)" }}>{featured.name}</p>
+                <p className="text-xs uppercase tracking-widest" style={{ color: "var(--color-ivoire)" }}>{featured.title}</p>
               </div>
             </div>
           </div>
@@ -188,12 +204,12 @@ export default function Testimonials() {
                 viewport={{ once: true }}
                 transition={{ duration: 1.2, delay: i * 0.15, ease: EASE }}
               >
-                <p className="text-base font-light leading-loose" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)", opacity: 0.8 }}>
+                <p className="text-base font-light leading-loose" style={{ fontFamily: "var(--font-body)", color: "var(--color-noir)" }}>
                   &quot;{t.quote}&quot;
                 </p>
                 <div className="pt-6 border-t" style={{ borderColor: "var(--color-noir)" }}>
-                  <p className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--color-rouge)" }}>{t.name}</p>
-                  <p className="text-xs uppercase tracking-widest mt-1" style={{ color: "var(--color-noir)", opacity: 0.4 }}>{t.title}</p>
+                  <p className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--color-vert)" }}>{t.name}</p>
+                  <p className="text-xs uppercase tracking-widest mt-1" style={{ color: "var(--color-noir)", opacity: 0.9 }}>{t.title}</p>
                 </div>
               </motion.div>
             ))}

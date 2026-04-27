@@ -22,12 +22,12 @@ function HeroDesktop() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [progress]);
 
-  const intro1Op  = useTransform(progress, [0.0,  0.12], [0, 0.7]);
-  const intro2Op  = useTransform(progress, [0.10, 0.22], [0, 0.7]);
-  const intro3Op  = useTransform(progress, [0.20, 0.32], [0, 0.7]);
+  const intro1Op  = useTransform(progress, [0.0,  0.12], [0, 1]);
+  const intro2Op  = useTransform(progress, [0.10, 0.22], [0, 1]);
+  const intro3Op  = useTransform(progress, [0.20, 0.32], [0, 1]);
   const h1Line1Op = useTransform(progress, [0.30, 0.46], [0, 1]);
   const h1Line2Op = useTransform(progress, [0.44, 0.60], [0, 1]);
-  const accentOp  = useTransform(progress, [0.58, 0.72], [0, 0.65]);
+  const accentOp  = useTransform(progress, [0.58, 0.72], [0, 1]);
   const ctaOp     = useTransform(progress, [0.70, 0.84], [0, 1]);
   const charOp    = useTransform(progress, [0.0,  0.20], [0, 1]);
 
@@ -60,7 +60,7 @@ function HeroDesktop() {
 
           <span
             className="text-xs uppercase tracking-[0.3em]"
-            style={{ color: "var(--color-ivoire)", opacity: 0.4 }}
+            style={{ color: "var(--color-ivoire)" }}
           >
             Guillaume Michel - Storyteller Stratégique
           </span>
@@ -91,7 +91,7 @@ function HeroDesktop() {
             style={{ fontFamily: "var(--font-display)", color: "var(--color-ivoire)" }}
           >
             <motion.span className="block" style={{ opacity: h1Line1Op }}>Un récit cohérent,</motion.span>
-            <motion.span className="block" style={{ opacity: h1Line2Op, color: "var(--color-rouge)" }}>beaucoup moins.</motion.span>
+            <motion.span className="block" style={{ opacity: h1Line2Op, color: "var(--color-blanc)" }}>beaucoup moins.</motion.span>
           </h1>
 
           <motion.p
@@ -111,7 +111,7 @@ function HeroDesktop() {
             </a>
             <span
               className="text-xs uppercase tracking-widest hidden md:block"
-              style={{ color: "var(--color-ivoire)", opacity: 0.35 }}
+              style={{ color: "var(--color-blanc)", opacity: 0.6 }}
             >
               Défiler ↓
             </span>
@@ -154,9 +154,9 @@ export default function Hero() {
 
           <motion.span
             className="text-xs uppercase tracking-[0.3em]"
-            style={{ color: "var(--color-ivoire)", opacity: 0.4 }}
+            style={{ color: "var(--color-ivoire)" }}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.4 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.3, ease: EASE }}
           >
             Guillaume Michel - Storyteller Stratégique
@@ -169,7 +169,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.3, delay: 0.5, ease: EASE }}
           >
-            <p className="text-xl font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)", opacity: 0.7 }}>
+            <p className="text-xl font-light leading-relaxed" style={{ fontFamily: "var(--font-body)", color: "var(--color-ivoire)" }}>
               Tu publies.<br />Encore.<br />Et ça s&apos;accumule.
             </p>
           </motion.div>
@@ -182,14 +182,14 @@ export default function Hero() {
             transition={{ duration: 1.3, delay: 0.8, ease: EASE }}
           >
             Un récit cohérent,<br />
-            <span style={{ color: "var(--color-rouge)" }}>beaucoup moins.</span>
+            <span style={{ color: "var(--color-blanc)" }}>beaucoup moins.</span>
           </motion.h1>
 
           <motion.p
             className="text-2xl"
-            style={{ fontFamily: "var(--font-accent)", color: "var(--color-ivoire)", opacity: 0.65 }}
+            style={{ fontFamily: "var(--font-accent)", color: "var(--color-ivoire)" }}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.65 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 1.3, delay: 1.1, ease: EASE }}
           >
             On se retrouve de l&apos;autre côté du miroir.
